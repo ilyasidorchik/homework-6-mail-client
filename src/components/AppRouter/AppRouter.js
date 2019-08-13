@@ -29,24 +29,26 @@ export default class AppRouter extends Component {
     };
 
     renderNav = () => (
-        <ul className={styles.navList + ' t-nav-list'}>
-            <li className={styles.navElement}>
-                <NavLink to="/app" exact className={styles.link + 't-link-home'}>Home</NavLink>
-            </li>
-            <li className={styles.navElement}>
-                <NavLink to="/app/inbox" className={styles.link + 't-link-inbox'}>Inbox</NavLink>
-            </li>
-            <li className={styles.navElement}>
-                <NavLink to="/app/outbox" className={styles.link + 't-link-outbox'}>Outbox</NavLink>
-            </li>
-        </ul>
+        <nav className={styles.nav}>
+            <ul className={styles.navList + ' t-nav-list'}>
+                <li className={styles.navElement}>
+                    <NavLink to="/app" exact className={styles.link + ' t-link-home'}>Home</NavLink>
+                </li>
+                <li className={styles.navElement}>
+                    <NavLink to="/app/inbox" className={styles.link + ' t-link-inbox'}>Inbox</NavLink>
+                </li>
+                <li className={styles.navElement}>
+                    <NavLink to="/app/outbox" className={styles.link + ' t-link-outbox'}>Outbox</NavLink>
+                </li>
+            </ul>
+        </nav>
     );
 
     render() {
         return (
             <div className={styles.wrapper}>
                 <div className={styles.container}>
-                    <nav className={styles.nav}>{ this.renderNav() }</nav>
+                    { this.renderNav() }
                     <div className={styles.content}>
                         <h3 className={styles.title}>{ this.getTitle() }</h3>
                         <Switch>

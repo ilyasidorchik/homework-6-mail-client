@@ -11,7 +11,7 @@ import Mail from '../Mail';
 const OutboxMail = ({ match: { params: { id } }, data }) => {
     const mail = data.outbox.find(mail => mail.id === id);
 
-    return <Mail type="To" mail={mail}></Mail>
+    return <Mail type="To" mail={mail} />
 };
 
 export default withData(OutboxMail);

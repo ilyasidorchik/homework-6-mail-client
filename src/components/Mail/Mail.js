@@ -8,7 +8,7 @@ import styles from './Mail.module.css';
 const Mail = ({ mail, type }) => (
     <div className={styles.container}>
         <p className={`t-mail-${type.toLowerCase()}`}>
-            {type}:<b>{mail[type.toLowerCase()]}</b>
+            {type}: <b>{mail[type.toLowerCase()]}</b>
         </p>
         <p className="t-mail-body">{mail.body}</p>
         <Link

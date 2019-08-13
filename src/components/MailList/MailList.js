@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import styles from './MailList.module.css';
 
 const MailList = ({ type, mails }) => (
-    <div className={styles.containter + ` t-${type}-list`}>
+    <div className={styles.container + ` t-${type}-list`}>
         {mails.map(mail => (
             <Link
                 to={`/app/${type}/${mail.id}`}
